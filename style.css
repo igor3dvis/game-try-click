@@ -1,0 +1,109 @@
+.container {
+    position: relative;
+    max-width: 40%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+table[data-gamefield] {
+    margin: 0 auto;
+}
+
+.gamefield {
+    margin-bottom: 20px;
+}
+
+.game-field__tr {}
+
+.game-field__td {
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+}
+
+.color-base {
+    background-color: rgb(222, 222, 222);
+}
+
+.color-try-catch {
+    background-color: blue;
+}
+
+.color-win {
+    background-color: green;
+}
+
+.color-fail {
+    background-color: red;
+}
+
+.count-tables {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.count-tables__table {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px;
+    background-color: rgb(211, 206, 206);
+}
+
+.count-tables__steps {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px;
+    color: indianred;
+    background-color: rgb(253, 252, 252);
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+.banner-win {
+    position: absolute;
+    width: 280px;
+    height: 90px;
+    margin: 86px auto auto;
+    left: calc(50% - 140px);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    /*color: green;*/
+    z-index: 100;
+}
+
+.form-start-options {
+    position: absolute;
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+    margin-top: 126px;
+    left: calc(50% - 150px);
+    padding: 20px;
+    background-color: rgb(49, 49, 49);
+    width: 260px;
+    height: 100px;
+    z-index: 50;
+}
+
+.button-start {
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.fon-dark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: cadetblue;
+    opacity: 0.4;
+    z-index: 40;
+}
