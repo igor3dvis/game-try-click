@@ -12,7 +12,7 @@
 // 2 - переписать объект gameCount и все что зависит от этого кода
 
 const FIELD_CELLS_COUNT = 10; // Field size CELLxCELL
-const CELL_SIZE = 24; // px
+const CELL_SIZE = 30; // px
 
 // корневые элементы
 let root = document.getElementById("root");

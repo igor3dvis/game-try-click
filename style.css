@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 .container {
     position: relative;
+    font-family: "Montserrat", sans-serif;
     max-width: 40%;
+    min-width: 320px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -13,12 +16,9 @@ table[data-gamefield] {
     margin-bottom: 20px;
 }
 
-.game-field__tr {}
-
 .game-field__td {
     width: 50px;
     height: 50px;
-    background-color: #555;
 }
 
 .color-base {
@@ -26,15 +26,15 @@ table[data-gamefield] {
 }
 
 .color-try-catch {
-    background-color: blue;
+    background-color: rgb(40, 107, 252);
 }
 
 .color-win {
-    background-color: green;
+    background-color: rgb(1, 126, 63);
 }
 
 .color-fail {
-    background-color: red;
+    background-color: rgb(192, 9, 33);
 }
 
 .count-tables {
@@ -45,17 +45,20 @@ table[data-gamefield] {
 }
 
 .count-tables__table {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1em;
+    text-align: center;
     padding: 10px;
-    background-color: rgb(211, 206, 206);
+    color: rgb(73, 67, 67);
+    background-color: rgb(235, 235, 235);
 }
 
 .count-tables__steps {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1em;
+    text-align: center;
     padding: 10px;
-    color: indianred;
+    color: rgb(150, 47, 47);
     background-color: rgb(253, 252, 252);
 }
 
@@ -68,9 +71,10 @@ table[data-gamefield] {
     position: absolute;
     width: 280px;
     height: 90px;
-    margin: 86px auto auto;
+    margin: 106px auto auto;
     left: calc(50% - 140px);
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     font-size: 2em;
     font-weight: bold;
@@ -83,12 +87,13 @@ table[data-gamefield] {
     position: absolute;
     display: grid;
     grid-template-rows: max-content max-content max-content;
-    margin-top: 126px;
+    align-content: space-around;
+    margin-top: 160px;
     left: calc(50% - 150px);
     padding: 20px;
     background-color: rgb(49, 49, 49);
     width: 260px;
-    height: 100px;
+    height: 140px;
     z-index: 50;
 }
 
@@ -96,6 +101,8 @@ table[data-gamefield] {
     padding: 5px;
     margin-bottom: 5px;
     cursor: pointer;
+    font-weight: 600;
+    color: rgb(150, 47, 47);
 }
 
 .fon-dark {
@@ -106,4 +113,11 @@ table[data-gamefield] {
     background-color: cadetblue;
     opacity: 0.4;
     z-index: 40;
+}
+
+@media (max-width: 480.98px) {
+    .container {
+        max-width: 90%;
+        min-width: 340px;
+    }
 }
