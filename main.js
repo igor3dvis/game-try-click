@@ -3,13 +3,7 @@
 // Это позволяет "собирать" в массив сыгранных клеток двузначные числа,
 // которые формируются из номера строки и колонки.
 // Если нужно игровое поле большего размера, нужно:
-// 1- переписать функцию getRandomCell так, что бы при проверке числа брались 
-//    не из общего массива, а осуществлялся проход по двум отдельным массивам строк 
-//    и колонок: 
-//      do{
-//    
-//      }while(row.includes && cell.includes)
-// 2 - переписать объект gameCount и все что зависит от этого кода
+// 
 
 const FIELD_CELLS_COUNT = 10; // Field size CELLxCELL
 const CELL_SIZE = 30; // px
@@ -173,18 +167,17 @@ function isFirstStart() {
 isFirstStart(); //входная точка программы
 
 // СТАРТ 
-function startGame() {
+async function startGame() {
     // запускаем таймер, и играем пока количество ходов меньше половины количества игровых клеток
-    let timerOneStep = setInterval(() => {
-        if (i < FIELD_CELLS_COUNT * FIELD_CELLS_COUNT / 2) {
-            i++;
-            switchElementColor();
-        } else {
-            clearInterval(timerOneStep);
-            isStartOptionsOnse = true;
-            whoWonBanner();
-        }
-    }, levelMseconds + 120);
+    //i < FIELD_CELLS_COUNT * FIELD_CELLS_COUNT / 2
+    if (i < 6) {
+        i++;
+        await switchElementColor();
+    } else {
+        isStartOptionsOnse = true;
+        whoWonBanner();
+    }
+
 }
 
 // функция показывает окно выбора уровня игры, вызывает функцию очистки поля, и запускает игру
@@ -255,6 +248,7 @@ function switchElementColor() {
         countSteps.innerHTML = `<span>STEPS: ${gameCount.summCatchedCell.length}</span>`;
 
         curentCell.curentCell.removeEventListener("click", listenCurCell);
+        startGame();
     }, levelMseconds);
 };
 
