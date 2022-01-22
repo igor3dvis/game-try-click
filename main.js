@@ -169,8 +169,7 @@ isFirstStart(); //входная точка программы
 // СТАРТ 
 async function startGame() {
     // запускаем таймер, и играем пока количество ходов меньше половины количества игровых клеток
-    //i < FIELD_CELLS_COUNT * FIELD_CELLS_COUNT / 2
-    if (i < 6) {
+    if (i < FIELD_CELLS_COUNT * FIELD_CELLS_COUNT / 2) {
         i++;
         await switchElementColor();
     } else {
